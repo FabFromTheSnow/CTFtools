@@ -10,7 +10,10 @@ cd "$CTF"
 curl $target/robots.txt --max-time 5 >> Recon.txt
 nmap -sC -sV -Pn -T5 $target >> Recon.txt
 echo "Nmap done"
-echo "info availlable in Recon.txt"
+echo "open info with sublime text"
+subl Recon.txt
 echo "Nikto wil take time, saving in Nikto.txt"
 nikto -h $target >> Nikto.txt
-echo check your new folder
+echo open nikto with sublime text
+subl Nikto.txt
+
