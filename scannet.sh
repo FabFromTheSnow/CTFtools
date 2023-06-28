@@ -1,5 +1,5 @@
  #!bin/bash
- if ["$1" == "" ]
+ if [ "$1" == "" ]
  then
  echo "specify IP address"
 
