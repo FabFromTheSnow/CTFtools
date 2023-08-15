@@ -1,3 +1,5 @@
+#Obsolete, just open vpn settings and you can tick "use only for own network" or something like
+#TheMostPreciseGuy
 nmcli connection up id "vpn connection name"
 read -t 3 -p "Connecting to vpn..."
 echo "route configuration"
