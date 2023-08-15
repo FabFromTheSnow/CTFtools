@@ -4,7 +4,7 @@ import base64
 
 username_trial = "GOUGH"
 bUsername_trial = b"GOUGH"
-
+i = 0
 print((hashlib.sha256(username_trial).hexdigest()[4])
 i += 1
 print((username_trial).hexdigest()[5])
