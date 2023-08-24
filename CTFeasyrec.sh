@@ -24,7 +24,7 @@ nikto -h $TARGET >> Nikto.txt
 echo open nikto with VScode
 code Nikto.txt
 
-
+: '
 HTTP=$(curl $TARGET --max-time 5)
 if [[ $HTTP == *"http"* ]]; then
     # Faites quelque chose si la variable contient "http"
@@ -33,3 +33,4 @@ else
     # Passez à la suite du script si la variable ne contient pas "http"
     echo "La variable \$HTTP ne contient pas 'http'."
 fi
+'
