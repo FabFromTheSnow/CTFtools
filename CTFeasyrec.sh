@@ -3,7 +3,7 @@
 echo Enter CTF Name
 read CTF
 echo Enter CTF target IP
-read target
+read TARGET
 echo $TARGET $CTF'.htb' >> /etc/hosts
 export ip=$TARGET
 
