@@ -1,5 +1,6 @@
 #!/bin/bash
 # CTF recon
+# test
 echo Enter CTF Name
 read CTF
 echo Enter CTF target IP
