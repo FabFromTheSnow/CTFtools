@@ -24,3 +24,4 @@ for domain in Domains:
 
     results = open('result.txt', 'a')
     results.write(url + " " + str(response) + "\n")
+#test
