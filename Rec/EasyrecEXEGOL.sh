@@ -23,10 +23,19 @@ if ! which code > /dev/null; then
   
 fi
 
-
-PORTS=$(nmap -sS -Pn -p- $TARGET | grep -oP '\d+(?=/tcp)' | tr '\n' ',' | sed 's/,$//')
+echo 'start quick nmap'
+PORTS=$(nmap -sS -Pn --open -p 80,443,22,5000 $TARGET | grep -oP '\d+(?=/tcp)' | tr '\n' ',' | sed 's/,$//')
 echo 'OPEN ports :'$PORTS
-echo "starting FULL scan in background"
-nmap -sC -sV -Pn $TARGET -p $PORTS >> Recon.txt &
-echo "Nmap done"
+echo "starting FULL scan in background, vscode will open once done"
+nmap -sC -sV -Pn $TARGET -p $PORTS >> "Recon.txt" && code "./Recon.txt"
+echo "Masscan running in background for udp"
+(masscan -pU:0-65535 $TARGET --rate=10000 --interface tun0 >> ./Recon.txt) &
+
+if grep -qi 'http' "Recon.txt"; then
+echo 'webserver detected'
+
+fi
+
+
+
 
