@@ -12,6 +12,7 @@ mkdir "$CTF"
 cd "$CTF"
 
 PORTS=$(nmap -sS -Pn -p- $TARGET | grep -oP '\d+(?=/tcp)' | tr '\n' ',' | sed 's/,$//')
-echo $PORTS
-nmap -sC -sV -Pn $TARGET -p $PORTS >> Recon.txt
+echo 'OPEN ports :'$PORTS
+echo "starting FULL scan in background"
+nmap -sC -sV -Pn $TARGET -p $PORTS >> Recon.txt &
 echo "Nmap done"
