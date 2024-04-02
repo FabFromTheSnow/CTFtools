@@ -1,2 +1,2 @@
 # CTFtools
-Quick tools to automatize my recon on beginners ctf :) !
+Quick tools to automatize  recon on ctf :) !
